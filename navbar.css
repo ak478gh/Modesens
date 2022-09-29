@@ -8,7 +8,7 @@ body{
 #nav{
     position: fixed;
     width: 98%;
-    border: 1px solid;
+    /* border: 1px solid; */
     padding: 1%;
     top: 0;
     background-color: #fff;
@@ -20,19 +20,24 @@ body{
 }
 #nav a{
     text-decoration: none;
-    padding: 12px;
+    padding: 15px 12px;
     color: black;
+    /* border: 1px solid; */
+}
+#nav a.active {
+    background-color: red;
 }
 /* Navbar links on mouse-over */
-#menus a:hover{
+#nav a:hover{
     text-decoration: underline;
     text-underline-offset: 10px;
 }
 
-#menus{
+.menus{
     /* border: 1px solid; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 12px;
     font-weight: 600;
 }
@@ -59,37 +64,34 @@ h5{
     display: none;
     background-color: white;
     position: absolute;
-    border:thin solid grey;
-    /* border-bottom: solid thin; */
+    left: 0;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
     top: 60px;
-    height: 5vh;
-    /* right: 50px; */
-    /* margin: auto; */
     padding: 8px 0px;
-    /* padding: 1%; */
     height: auto;
-    /* justify-content: space-between; */
-    width: 80%;
+    width: 100%;
     min-width: 160px;
     z-index: 1;
 }
-.drpdwn-content>div{
-    border: 1px solid;
-    width: 100%;
+#home{
+    display: none;
 }
-.drpdwn-content a{
-    float: none;
-    display: block;
-    text-decoration: none;
-    /* text-align: left; */
-    color: white;
-    /* border: 1px solid; */
-}
-#menus:hover .drpdwn-content{
+.menuTab:hover .drpdwn-content{
     display: flex;
-    /* justify-content: space-between; */
 }
 
+.drpdwn-menus{
+    display: flex;
+    /* border: 1px solid red; */
+    width: auto;
+    margin-left: 13vw;
+}
+#home{
+    display: flex;
+}
+/* #home>div{
+} */
 /* INVITE */
 #invite{
     display: flex;
