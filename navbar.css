@@ -194,7 +194,7 @@ h5{
     /* border: 1px solid; */
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 75px 30px;
+    gap: 25px 30px;
 }
 #partners img{
     width: 90%;
