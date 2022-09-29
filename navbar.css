@@ -179,7 +179,11 @@ h5{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 50px);
+    gap: 50px 20px;
 }
 #partners>img{
     border: 1px solid;
+}
+#grids>img{
+
 }
