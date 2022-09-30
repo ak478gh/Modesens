@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="navbar.css">
+    <!-- <script src="./index.js"></script> -->
 
 </head>
 <body>
@@ -160,7 +161,24 @@
                 <i class="fa-sharp fa-solid fa-flag-usa"></i>
                 <i class="fa fa-bell"></i>
                 <i class="fa fa-bag-shopping"></i>
-                <i class="fa fa-user"></i>
+                <i class="fa fa-user" id="user"></i>
+                <div id="login_popup">
+                    <div><p>Lorem ipsum dolor sit amet consectetur</p></div>
+                    <div>
+                        <a href="">My Likes</a>
+                        <a href="">My Alerts</a>
+                        <a href="">My Recent Viewed</a>
+                        <a href=""></a><hr>
+                        <a href="">My Closet</a>
+                        <a href="">My Orders</a>
+                        <a href="">My SavedSearched</a>
+                        <a href="">My Loyality</a>
+                        <a href="">My Messages</a>
+                        <a href="">Invite Friends</a>
+                        <a href="">Settings</a><hr>
+                        <a href="" id="login">Log In</a>
+                    </div>
+                </div>
                 <i class="fa fa-magnifying-glass"></i><a href="">SEARCH</a>
             </div>
             
@@ -171,7 +189,27 @@
         <img src="https://cdn.modesens.com/static/img/20220915_bg1.png" alt="">
         <h1>CHECK MODESENS <br>BEFORE YOU BUY</h1>
         <p>Get three month of silver membership for you and your friend.</p>
-        <button>INVITE FRIEND</button>
+        <button id="join">JOIN NOW FOR FREE</button>
+    </div>
+    <!-- LoginPage -->
+    <div id="loginPage">
+        <div></div>
+        <div>
+            <i class="fa fa-xmark" id="close"></i>
+            <h4>Create an account</h4>
+            <p>Unleash your shopping power. <br>Check ModeSens before you buy.</p>
+            <form action="">
+                <input id="email" type="email" placeholder="Email">
+                <input id="password" type="password" placeholder="Password"><br>
+                <!-- <input type="checkbox" id="tick"> -->
+                <!-- <label for="vehicle1">Subscribe to personalized sale updates and offers</label> -->
+                <input type="submit" id="submit">
+                <button id="loginBtn">LOGIN</button>
+                </form>
+                <a href="" id="loginLink">Already have an account? Please sign in.
+                </a>
+
+        </div>
     </div>
     <!-- Try It Out -->
     <div class="tryItOut">
@@ -230,7 +268,7 @@
             <img src="https://cdn.modesens.com/static/img/20220915-video1-pic.png" alt="">
         </div>
     </div>
-    <!-- Install & Download -->
+    <!-- Install -->
     <div class="heading">
         <h2>COMPARE AND SHOP WHEREVER YOU GO</h2>
         <p>To unlock all of ModeSens' features and functionality, simply download our App and Browser Extension.</p>
@@ -246,6 +284,171 @@
             <img src="https://cdn.modesens.com/static/img/20220921_install_img.png" alt="">
         </div>
     </div>
-
+    <!-- Download -->
+    <div id="download">
+        <div>
+            <img src="https://cdn.modesens.com/static/img/20220926_download_img.png" alt="">
+        </div>
+        <div class="textPart">
+            <h3>Download the ModeSens App</h3>
+            <p>Automatically compare products across 500+ stores while you browse at any of our partner stores' websites.</p>
+            <button><img src="https://cdn.modesens.com/static/img/20220926download_ios.svg" alt=""></button><button><img src="https://cdn.modesens.com/static/img/20220926download_ios.svg" alt=""></button>
+        </div>
+    </div>
+    <!-- Join for free -->
+    <div id="join">
+        <img src="https://cdn.modesens.com/static/img/20220915-bg2.png" alt="">
+        <h1>WE HAVE HELPED MILLIONS OF MEMBERS SAVE:</h1>
+        <p>$223, 881, 000+</p>
+        <button>JOIN NOW FOR FREE</button>
+    </div>
+    <!-- SHOP YOUR FAVORITE CATEGORY -->
+    <div>
+        <h1 style="text-align:center; margin: 100px 0 25px 0 ;">SHOP YOUR FAVORITE CATEGORY</h1>
+        <div id="gender">
+            <div id="try">
+                <img src="https://cdn.modesens.com/banner/20220916Category-women-modesens.jpg" alt="">
+                <h3>WOMEN</h3>
+            </div>
+            <div id="try">
+                <img src="https://cdn.modesens.com/banner/20220916Category-men-modesens.jpg" alt=""><h3>MEN</h3>
+            </div>
+        </div>
+        <div id="others">
+            <div id="try">
+                <img src="https://cdn.modesens.com/banner/20220916Category-kids-modesens.jpg" alt="">
+                <h3>KIDS</h3>
+            </div>
+            <div id="try">
+                <img src="https://cdn.modesens.com/banner/20220916Category-beauty-modesens.jpg" alt=""><h3>BEAUTY</h3>
+            </div>
+            <div id="try">
+                <img src="https://cdn.modesens.com/banner/20220916Category-home-modesens.jpg" alt=""><h3>FURNITURE</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Read Our Story -->
+    <div id="story">
+        <img src="https://cdn.modesens.com/static/img/20220915-bg3.png" alt="">
+        <h1>Built By Shoppers For Shoppers</h1>
+        <p>Our mission is to develop the future of shopping. You only need to know what you like. We will handle the rest.</p>
+        <a href="">READ OUR STORY</a>
+    </div>
+    <hr>
+    <!-- FOOTER -->
+    <div id="footer">
+        <div>
+            <h4>CUSTOMER CARE</h4>
+            <a href="">Shopper Protection</a>
+            <a href="">Loyality Program</a>
+            <a href="">Help Center</a>
+            <a href="">Size Guides</a>
+            <a href="">Contact Us / Feedback</a>
+            <a href="">Shipping / Returns</a>
+        </div>
+        
+        <div>
+            <h4>INFORMATION</h4>
+            <a href="">About Us</a>
+            <a href="">Infuencer Program</a>
+            <a href="">Partner Stores</a>
+            <a href="">Sitemap</a>
+        </div>
+        <div>
+            <h4>LEGAL</h4>
+            <a href="">Terms Of Use</a>
+            <a href="">Disclosure</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Community Guidlines</a>
+        </div>
+        <div>
+            <h4>CONNECT WITH US</h4>
+            <i class="fa-brands fa-apple"></i>
+            <i class="fa-brands fa-android"></i>
+            <i class="fa-solid fa-puzzle-piece"></i>
+        </div>
+        <div>
+            <h4>NEWSLETTER SIGN UP</h4>
+            <input type="email" placeholder="Email Address">
+            <button>SUBMIT</button>
+        </div>
+    </div>
+    <p>When you follow our links to visit a brand or retailer’s website or make a purchase, ModeSens may earn a commission.</p>
+    <hr>
+    <div id="links">
+        <div><img src="https://cdn.modesens.com/static/img/20180905footer_logo.svg" alt=""><p>2022, ModeSens Inc</p></div>
+        <div id="icons">
+            <div><i class="fa-brands fa-pinterest"></i></div>
+            
+            <div><i class="fa-brands fa-twitter"></i></div>
+            <div><i class="fa-brands fa-instagram"></i></div>
+            <div><i class="fa-brands fa-facebook"></i></div>
+            <div><i class="fa-brands fa-weibo"></i></div>
+            <div><i class="fa-brands fa-reddit-alien"></i></div>
+            <div><i class="fa-brands fa-discord"></i></div>
+        </div>
+    </div>
 </body>
 </html>
+<script>
+    let user = document.querySelector('#user')
+    let login_popup = document.getElementById('login_popup');
+    let login = document.querySelector('#login');
+    let loginPage = document.querySelector('#loginPage');
+    let close = document.querySelector('#close');
+
+    user.addEventListener('click', function(event) {
+        event.preventDefault();
+        login_popup.style.display = 'block';
+    })
+    
+    login.addEventListener('click', openloginPage);
+    document.querySelector('#join').addEventListener('click', openloginPage);
+
+    function openloginPage(event) {
+        event.preventDefault();
+        login_popup.style.display = 'none';
+        loginPage.style.display = 'grid';
+    }
+
+    // Functionality of Cross Mark:
+    close.addEventListener('click', function(event) {
+        loginPage.style.display = 'none';
+    })
+
+    // Functionality of Submit Button:
+    document.querySelector('form').addEventListener('submit', formSubmit);
+    function formSubmit(event) {
+        event.preventDefault();
+        let formObj = {
+            email:document.querySelector('#email').value,
+            password:document.querySelector('#password').value
+        }
+        localStorage.setItem('credentials', JSON.stringify(formObj));
+        loginPage.style.display = 'none';
+    }
+
+    // Login Funtionality:
+    document.querySelector('#loginLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('#submit').style.display = 'none';
+        document.querySelector('#loginBtn').style.display = 'block';
+        document.querySelector('#email').value = '';
+        document.querySelector('#password').value = '';
+    })
+    document.querySelector('#loginBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        let credentials = JSON.parse(localStorage.getItem('credentials'));
+        
+        if((document.querySelector('#email').value == credentials.email) && (document.querySelector('#password').value == credentials.password)) {
+            alert('Login Succesful');
+            loginPage.style.display = 'none';
+            login.innerText = 'Sign Out';
+        } else {
+            let warning = document.createElement('h2');
+            warning.innerText = 'Credentials Does not match';
+            document.querySelector('form').append(warning);
+        }
+    })
+
+</script>
