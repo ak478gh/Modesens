@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="navbar.css">
+    <!-- <script src="./index.js"></script> -->
 
 </head>
 <body>
@@ -160,7 +161,24 @@
                 <i class="fa-sharp fa-solid fa-flag-usa"></i>
                 <i class="fa fa-bell"></i>
                 <i class="fa fa-bag-shopping"></i>
-                <i class="fa fa-user"></i>
+                <i class="fa fa-user" id="user"></i>
+                <div id="login_popup">
+                    <div><p>Lorem ipsum dolor sit amet consectetur</p></div>
+                    <div>
+                        <a href="">My Likes</a>
+                        <a href="">My Alerts</a>
+                        <a href="">My Recent Viewed</a>
+                        <a href=""></a><hr>
+                        <a href="">My Closet</a>
+                        <a href="">My Orders</a>
+                        <a href="">My SavedSearched</a>
+                        <a href="">My Loyality</a>
+                        <a href="">My Messages</a>
+                        <a href="">Invite Friends</a>
+                        <a href="">Settings</a><hr>
+                        <a href="" id="login">Log In</a>
+                    </div>
+                </div>
                 <i class="fa fa-magnifying-glass"></i><a href="">SEARCH</a>
             </div>
             
@@ -171,7 +189,27 @@
         <img src="https://cdn.modesens.com/static/img/20220915_bg1.png" alt="">
         <h1>CHECK MODESENS <br>BEFORE YOU BUY</h1>
         <p>Get three month of silver membership for you and your friend.</p>
-        <button>INVITE FRIEND</button>
+        <button id="join">JOIN NOW FOR FREE</button>
+    </div>
+    <!-- LoginPage -->
+    <div id="loginPage">
+        <div></div>
+        <div>
+            <i class="fa fa-xmark" id="close"></i>
+            <h4>Create an account</h4>
+            <p>Unleash your shopping power. <br>Check ModeSens before you buy.</p>
+            <form action="">
+                <input id="email" type="email" placeholder="Email">
+                <input id="password" type="password" placeholder="Password"><br>
+                <!-- <input type="checkbox" id="tick"> -->
+                <!-- <label for="vehicle1">Subscribe to personalized sale updates and offers</label> -->
+                <input type="submit" id="submit">
+                <button id="loginBtn">LOGIN</button>
+                </form>
+                <a href="" id="loginLink">Already have an account? Please sign in.
+                </a>
+
+        </div>
     </div>
     <!-- Try It Out -->
     <div class="tryItOut">
@@ -352,3 +390,65 @@
     </div>
 </body>
 </html>
+<script>
+    let user = document.querySelector('#user')
+    let login_popup = document.getElementById('login_popup');
+    let login = document.querySelector('#login');
+    let loginPage = document.querySelector('#loginPage');
+    let close = document.querySelector('#close');
+
+    user.addEventListener('click', function(event) {
+        event.preventDefault();
+        login_popup.style.display = 'block';
+    })
+    
+    login.addEventListener('click', openloginPage);
+    document.querySelector('#join').addEventListener('click', openloginPage);
+
+    function openloginPage(event) {
+        event.preventDefault();
+        login_popup.style.display = 'none';
+        loginPage.style.display = 'grid';
+    }
+
+    // Functionality of Cross Mark:
+    close.addEventListener('click', function(event) {
+        loginPage.style.display = 'none';
+    })
+
+    // Functionality of Submit Button:
+    document.querySelector('form').addEventListener('submit', formSubmit);
+    function formSubmit(event) {
+        event.preventDefault();
+        let formObj = {
+            email:document.querySelector('#email').value,
+            password:document.querySelector('#password').value
+        }
+        localStorage.setItem('credentials', JSON.stringify(formObj));
+        loginPage.style.display = 'none';
+    }
+
+    // Login Funtionality:
+    document.querySelector('#loginLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('#submit').style.display = 'none';
+        document.querySelector('#loginBtn').style.display = 'block';
+        document.querySelector('#email').value = '';
+        document.querySelector('#password').value = '';
+    })
+    document.querySelector('#loginBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        let credentials = JSON.parse(localStorage.getItem('credentials'));
+        
+        if((document.querySelector('#email').value == credentials.email) && (document.querySelector('#password').value == credentials.password)) {
+            alert('Login Succesful');
+            loginPage.style.display = 'none';
+            login.innerText = 'Sign Out';
+        } else {
+            let warning = document.createElement('h2');
+            warning.innerText = 'Credentials Does not match';
+            document.querySelector('form').append(warning);
+        }
+    })
+
+</script>
