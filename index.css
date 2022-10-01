@@ -294,6 +294,7 @@ h5{
     cursor: pointer;
 }
 #gender{
+    /* text-decoration: none; */
     width: 90vw;
     height: 25vhpx;
     /* border: 1px solid; */
@@ -304,11 +305,15 @@ h5{
 #try img{
     width: 100%;
 }
+#try a{
+    text-decoration: none;
+    color: #080000;
+}
 #try h3{
+    
     text-align: center;
     background-color: grey;
     cursor: pointer;
-    border-right:1px solid #080000 ;
     border-left:1px solid #080000 ;
 }
 #others{
@@ -316,6 +321,7 @@ h5{
     height: 250px;
     /* border: 1px solid; */
     margin: auto;
+    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
