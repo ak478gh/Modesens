@@ -19,25 +19,39 @@ body{
     margin-top: 60px;
     display: grid;
     grid-template-columns: 70% 30%;
+    column-gap: 5px;
     /* grid-template-rows: 500px; */
 }
-#container>div:last-child{
+#summary{
     border: 1px solid;
+    height: 200px;
+    
+}
+#summary>div{
+    display: flex;
+    justify-content: space-around;
+}
+#summary label{
+    font-size: 20px;
+}
+#summary>div:last-child{
+    font-size: 40px;
+    margin-top: 50px;
 }
 h2{
     margin-top: 30px;
     margin-bottom: 20px;
     font-weight: 500;
 }
-#cards{
-    /* border: 1px solid green; */
-    /* margin: auto; */
-}
 #cards>div{
-    border: 1px solid grey;
+    border: 1px solid rgb(173, 166, 166);
     text-align: center;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    align-items: center;
 }
 #cards img{
+    /* border: 1px solid; */
     height: 200px;
 }
 h3{
