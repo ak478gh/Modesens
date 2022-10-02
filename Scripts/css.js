@@ -54,4 +54,5 @@
         // console.log(cartItemFromLS)
         localStorage.setItem('cart_items', JSON.stringify(cartItemFromLS)) // Updating the items in LS
         window.location.reload(); // Reloading the Page
-    }
+    };
+    
